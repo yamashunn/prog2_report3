@@ -54,28 +54,59 @@ public class Enemy {
         }
     }
     //-----------------ここからアクセサ-----------------
-
+    /**
+     * クラス外から敵の名前を受け取るメソッド
+     * @return name 敵の名前
+     */
     public String getName(){
         return this.name;
     }
+    /**
+     * クラス外から敵のHPを受け取るメソッド
+     * @return hitPoint 敵のHP
+     */
     public int gethitPoint(){
         return this.hitPoint;
     }
+    /**
+     * クラス外から敵の攻撃力を受け取るメソッド
+     * @return attack 敵の攻撃力
+     */
     public int getattack(){
         return this.attack;
     }
+    /**
+     * クラス外から敵の生存状態を確認するメソッド
+     * @return dead 敵の生死
+     */
     public boolean getdead(){
         return this.dead;
     }
+    /**
+     * クラス外から敵の名前を設定するメソッド
+     * @param name 敵の名前
+     */
     public void setName(String name){
         this.name = name;
     }
+    /**
+     * クラス外から敵のHPを設定するメソッド
+     * @param hp　敵のHP
+     */
     public void gethitPoint(int hp){
         this.hitPoint = hp;
     }
+    /**
+     * クラス外から敵の攻撃力を設定するメソッド
+     * @param atk　敵の攻撃力
+     */
     public void getattack(int atk){
         this.attack = atk;
     }
+    /**
+     * クラス外から敵の生存状態を設定するメソッド
+     * @param life　敵の生死
+     */
     public void getdead(boolean life){
         this.dead = life;
     }

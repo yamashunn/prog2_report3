@@ -53,27 +53,59 @@ public class Hero {
     }
     //-----------------ここからアクセサ-----------------
 
+    /**
+     * クラス外からHeroの名前を受け取るメソッド
+     * @return hero Heroの名前
+     */
     public String getName(){
         return this.name;
     }
+    /**
+     * クラス外からHeroのHPを受け取るメソッド
+     * @return hitPoint HeroのHP
+     */
     public int gethitPoint(){
         return this.hitPoint;
     }
+    /**
+     * クラス外からHeroの攻撃力を受け取るメソッド
+     * @return attack Heroの攻撃力
+     */
     public int getattack(){
         return this.attack;
     }
+    /**
+     * クラス外からHeroの生存状態を確認するメソッド
+     * @return dead Heroの生死
+     */
     public boolean getdead(){
         return this.dead;
     }
+    /**
+     * クラス外からHeroの名前を設定するメソッド
+     * @param name Heroの名前
+     */
     public void setName(String name){
         this.name = name;
     }
+    /**
+     * クラス外からHeroのHPを設定するメソッド
+     * @param hp　HeroのHP
+     */
     public void gethitPoint(int hp){
         this.hitPoint = hp;
     }
+    /**
+     * クラス外からHeroの攻撃力を設定するメソッド
+     * @param atk　Heroの攻撃力
+     */
     public void getattack(int atk){
         this.attack = atk;
     }
+    /**
+     * クラス外からHeroの生存状態を設定するメソッド
+     * @param life　Heroの生死
+     */
     public void getdead(boolean life){
         this.dead = life;
     }
