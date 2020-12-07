@@ -8,11 +8,7 @@ package jp.ac.uryukyu.ie.e205733;
  *  boolean dead; //敵の生死状態。true=死亡。
  * Created by tnal on 2016/11/13.
  */
-public class Hero {
-    private String name;
-    private int hitPoint;
-    private int attack;
-    private boolean dead;
+public class Hero extends LivingThing{
 
     /**
      * コンストラクタ。名前、最大HP、攻撃力を指定する。
@@ -21,22 +17,7 @@ public class Hero {
      * @param attack ヒーローの攻撃力
      */
     public Hero (String name, int maximumHP, int attack) {
-        this.name = name;
-        hitPoint = maximumHP;
-        this.attack = attack;
-        dead = false;
-        System.out.printf("%sのHPは%d。攻撃力は%dです。\n", name, maximumHP, attack);
-    }
-
-    /**
-     * Enemyへ攻撃するメソッド。
-     * attackに応じて乱数でダメージを算出し、hero.wounded()によりダメージ処理を実行。
-     * @param e 攻撃対象
-     */
-    public void attack(Enemy e){
-        int damage = (int)(Math.random() * attack);
-        System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, e.getName(), damage);
-        e.wounded(damage);
+        super(name,maximumHP,attack);
     }
 
     /**
@@ -53,13 +34,7 @@ public class Hero {
     }
     //-----------------ここからアクセサ-----------------
 
-    /**
-     * クラス外からHeroの名前を受け取るメソッド
-     * @return hero Heroの名前
-     */
-    public String getName(){
-        return this.name;
-    }
+    
     /**
      * クラス外からHeroのHPを受け取るメソッド
      * @return hitPoint HeroのHP
@@ -74,13 +49,7 @@ public class Hero {
     public int getattack(){
         return this.attack;
     }
-    /**
-     * クラス外からHeroの生存状態を確認するメソッド
-     * @return dead Heroの生死
-     */
-    public boolean getdead(){
-        return this.dead;
-    }
+    
     /**
      * クラス外からHeroの名前を設定するメソッド
      * @param name Heroの名前
@@ -92,21 +61,21 @@ public class Hero {
      * クラス外からHeroのHPを設定するメソッド
      * @param hp　HeroのHP
      */
-    public void gethitPoint(int hp){
+    public void sethitPoint(int hp){
         this.hitPoint = hp;
     }
     /**
      * クラス外からHeroの攻撃力を設定するメソッド
      * @param atk　Heroの攻撃力
      */
-    public void getattack(int atk){
+    public void setattack(int atk){
         this.attack = atk;
     }
     /**
      * クラス外からHeroの生存状態を設定するメソッド
      * @param life　Heroの生死
      */
-    public void getdead(boolean life){
+    public void setdead(boolean life){
         this.dead = life;
     }
 
